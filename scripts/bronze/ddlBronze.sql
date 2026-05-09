@@ -21,7 +21,7 @@ CREATE TABLE bronze.crmCustInfo (
     cstKey             NVARCHAR(50),
     cstFirstname       NVARCHAR(50),
     cstLastname        NVARCHAR(50),
-    cstMarital_status  NVARCHAR(50),
+    cstMaritalStatus  NVARCHAR(50),
     cstGndr            NVARCHAR(50),
     cstCreateDate     DATE
 );
