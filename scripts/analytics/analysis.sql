@@ -57,11 +57,11 @@ go
         GROUP BY c.gender;
 
         
-        SELECT 
+        sELECT 
             p.subcategory AS Sub_Category,
             SUM(f.salesamount) AS Total_revenue,
             SUM(p.cost * f.quantity) AS Total_Cost,
-            ((SUM(f.salesamount) - SUM(p.cost * f.quantity)) / SUM(f.salesamount)) * 100 AS Profit_Margin_Pct
+            CAST(((100.0 * (SUM(f.salesamount) - SUM(p.cost * f.quantity))) / SUM(f.salesamount)) AS DECIMAL(10,2)) AS profit_margin_pct
         FROM [dataWareHouse].[gold].[dimProducts] p
         JOIN [dataWareHouse].[gold].[factSales] f ON p.productkey = f.productkey
         GROUP BY p.subcategory
