@@ -8,6 +8,8 @@ Script Purpose:
 	  Run this script to re-define the DDL structure of 'bronze' Tables
 ===============================================================================
 */
+use dataWareHouse
+go
 
 IF OBJECT_ID('silver.crmCustInfo', 'U') IS NOT NULL
     DROP TABLE silver.crmCustInfo;
@@ -50,9 +52,9 @@ CREATE TABLE silver.crmSalesDetails (
     slsOrdNum  NVARCHAR(50),
     slsPrdKey  NVARCHAR(50),
     slsCustId  INT,
-    slsOrderDt INT,
-    slsShipDt  INT,
-    slsDueDt   INT,
+    slsOrderDt DATE,
+    slsShipDt  DATE,
+    slsDueDt   DATE,
     slsSales    INT,
     slsQuantity INT,
     slsPrice    INT,

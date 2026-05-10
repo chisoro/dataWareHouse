@@ -131,16 +131,16 @@ BEGIN
 			slsPrdKey,
 			slsCustId,
 			CASE 
-				WHEN slsOrderDt = 0 OR LEN(CAST(slsOrderDt AS VARCHAR)) != 8 THEN NULL
-				ELSE CAST(CONVERT(VARCHAR, CONVERT(DATE, CAST(slsOrderDt AS VARCHAR), 112), 112) AS INT)
+			WHEN slsOrderDt = 0 OR LEN(CAST(slsOrderDt AS VARCHAR)) != 8 THEN NULL
+				ELSE CONVERT(DATE, CAST(slsOrderDt AS VARCHAR), 112)
 			END AS slsOrderDt,
 			CASE 
 				WHEN slsShipDt = 0 OR LEN(CAST(slsShipDt AS VARCHAR)) != 8 THEN NULL
-				ELSE CAST(CONVERT(VARCHAR, CONVERT(DATE, CAST(slsShipDt AS VARCHAR), 112), 112) AS INT)
+				ELSE CONVERT(DATE, CAST(slsShipDt AS VARCHAR), 112)
 			END AS slsShipDt,
 			CASE 
 				WHEN slsDueDt = 0 OR LEN(CAST(slsDueDt AS VARCHAR)) != 8 THEN NULL
-				ELSE CAST(CONVERT(VARCHAR, CONVERT(DATE, CAST(slsDueDt AS VARCHAR), 112), 112) AS INT)
+				ELSE CONVERT(DATE, CAST(slsDueDt AS VARCHAR), 112)
 			END AS slsDueDt,
 			CASE 
 				WHEN slsSales IS NULL OR slsSales <= 0 OR slsSales != slsQuantity * ABS(slsPrice) 
@@ -175,7 +175,7 @@ BEGIN
 			END AS cid, 
 			CASE
 				WHEN bdate > GETDATE() THEN NULL
-				when bdate < '1899-12-31' THEN NULL
+				when bdate < '1900-01-01' THEN NULL
 				ELSE bdate
 			END AS bdate, -- Set future birthdates to NULL
 			CASE

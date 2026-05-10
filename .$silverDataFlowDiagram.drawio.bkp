@@ -7,8 +7,8 @@
         <mxCell id="83bsMKu6DQAnTOZldikZ-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" value="" vertex="1">
           <mxGeometry height="430" width="120" x="30" y="180" as="geometry" />
         </mxCell>
-        <mxCell id="83bsMKu6DQAnTOZldikZ-3" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;fontStyle=1;fontSize=18;strokeColor=none;" value="Bronze to Silver Layer Data Flow Diagram" vertex="1">
-          <mxGeometry height="60" width="430" x="10" y="10" as="geometry" />
+        <mxCell id="83bsMKu6DQAnTOZldikZ-3" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;fontStyle=1;fontSize=18;strokeColor=none;" value="Bronze Layer Data Flow Diagram" vertex="1">
+          <mxGeometry height="60" width="300" x="10" y="10" as="geometry" />
         </mxCell>
         <mxCell id="83bsMKu6DQAnTOZldikZ-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontStyle=1" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Sources&lt;/font&gt;" vertex="1">
           <mxGeometry height="60" width="120" x="30" y="150" as="geometry" />
